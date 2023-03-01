@@ -1,0 +1,77 @@
+<Render>:
+    canvas.before:
+        Color:
+            rgba: 0.21, 0.21, 0.21, 0.7
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            
+    BoxLayout:
+        orientation: 'horizontal'
+        size: root.width, root.height
+        padding: 20
+        spacing: 10
+        id: box
+
+        BoxLayout:
+            orientation: 'vertical'
+            padding: 10
+            spacing: 10
+            size_hint: (0.45, 1)
+            id: secbox
+
+            Label:
+                id: mainlabel
+                text: '[font=Roboto][b]Enter points amount[b][/font]'
+                font_size: 28
+                size_hint: (1, 0.2)
+                multiline: True 
+                markup: True
+
+            BoxLayout:
+                orientation: 'horizontal'
+                spacing: 10
+                id: input_box
+                size_hint: (1, 0.15)
+
+                TextInput:
+                    id: x
+                    multiline: False
+                    font_size: 24
+                    padding: 10
+
+            Label:
+                id: stat
+                text: 'Status: Waiting for data'
+                font_size: 24
+                size_hint: (1, 0.2)
+                text_size: self.size
+                halign: 'left'
+                valign: 'top'
+                markup: True
+            
+            BoxLayout:
+                orientation: 'vertical'
+
+            Button:
+                text: "Submit"
+                on_press: root.press()
+                size_hint: (1, 0.2)
+                font_size: 24
+                id: button
+
+
+        
+            
+            
+
+
+
+        
+
+
+            
+
+            
+        
+
